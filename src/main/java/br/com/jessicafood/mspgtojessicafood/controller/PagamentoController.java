@@ -36,7 +36,7 @@ public class PagamentoController {
     @PostMapping
     public ResponseEntity<PagamentoDto> cadastrar(@RequestBody @Valid PagamentoDto dto, UriComponentsBuilder uriBuilder) {
         PagamentoDto pagamento = service.criarPagamento(dto);
-        URI endereco = uriBuilder.path("/pagamentos/{id}").buildAndExpand(pagamento.getPedidoId()).toUri();
+        URI endereco = uriBuilder.path("/pagamentos/{id}").buildAndExpand(pagamento.getId()).toUri();
 
         return ResponseEntity.created(endereco).body(pagamento);
     }

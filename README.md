@@ -14,6 +14,51 @@ Microservice Responsible for Payment Service
        curl --location --request GET 'http://localhost:8080/pagamentos'
 <br>
 
+- [x] POST (Include Payment)
+   <details><summary>Curl</summary>
+        <p>
+  
+       curl --location --request POST 'http://localhost:8080/pagamentos' \
+       --header 'Content-Type: application/json' \
+       --data-raw '{
+       "valor": 100,
+       "nome": "Amora",
+       "numero": "12345678",
+       "expiracao": "10/29",
+       "codigo": "113",
+       "status": "CRIADO",
+       "pedidoId": 1,
+       "formaDePagamentoId": 1
+       }'
+<br>
+
+- [x] DELETE (Deleted Payments)
+   <details><summary>Curl</summary>
+        <p>
+  
+       curl --location --request DELETE 'http://localhost:8080/pagamentos/1'
+<br>
+
+- [x] PUT (Deleted Payments)
+   <details><summary>Curl</summary>
+        <p>
+  
+       curl --location --request PUT 'http://localhost:8080/pagamentos/3' \
+       --header 'Content-Type: application/json' \
+       --data-raw '{
+       "valor": 100,
+       "nome": "Mel",
+       "numero": "12145678",
+       "expiracao": "09/29",
+       "codigo": "133",
+       "status": "CRIADO",
+       "pedidoId": 1,
+       "formaDePagamentoId": 1
+       }'
+<br>
+
+
+
 
 
 <a href="https://github.com/JehhFeitosa">

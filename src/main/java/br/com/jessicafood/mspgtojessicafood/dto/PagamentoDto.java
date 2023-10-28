@@ -21,6 +21,8 @@ Criação de um objeto que será serializado
 @Setter
 public class PagamentoDto {
 
+    private Long id;
+
     private BigDecimal valor;
 
     @NotBlank
